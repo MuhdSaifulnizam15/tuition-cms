@@ -1,6 +1,6 @@
 # tuition-cms
 
-### Tuition management system application using React.js\
+### Tuition management system application using React.js
 
 ## Manual Installation
 
