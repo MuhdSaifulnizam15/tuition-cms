@@ -48,17 +48,6 @@ const RouteWithSidebar = ({ component: Component, ...rest }) => {
         const timer = setTimeout(() => setLoaded(true), 1000);
         return () => clearTimeout(timer);
     }, []);
-  
-    const localStorageIsSettingsVisible = () => {
-        return localStorage.getItem('settingsVisible') === 'false' ? false : true
-    }
-  
-    const [showSettings, setShowSettings] = useState(localStorageIsSettingsVisible);
-  
-    const toggleSettings = () => {
-        setShowSettings(!showSettings);
-        localStorage.setItem('settingsVisible', !showSettings);
-    }
 
     const token = JSON.parse(localStorage.getItem("token"));
 
@@ -75,7 +64,7 @@ const RouteWithSidebar = ({ component: Component, ...rest }) => {
             <main className="content">
                 <Topbar />
                 <Component {...props} />
-                <Footer toggleSettings={toggleSettings} showSettings={showSettings} />
+                <Footer />
             </main>
             </>
         )}

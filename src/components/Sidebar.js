@@ -4,7 +4,7 @@ import SimpleBar from 'simplebar-react';
 import { useLocation } from "react-router-dom";
 import { CSSTransition } from 'react-transition-group';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBook, faChartPie, faCog, faHandHoldingUsd, faSignOutAlt, faTimes, faUsers, faUserGraduate, faChalkboardTeacher, faChalkboard, faUserNinja, faFilePdf, faFileArchive, faUser } from "@fortawesome/free-solid-svg-icons";
+import { faBook, faChartPie, faCog, faSignOutAlt, faTimes, faUsers, faChalkboard } from "@fortawesome/free-solid-svg-icons";
 import { Nav, Badge, Image, Button, Dropdown, Accordion, Navbar } from '@themesberg/react-bootstrap';
 import { Link } from 'react-router-dom';
 
@@ -44,13 +44,13 @@ export default function Sidebar(props = {}) {
   };
 
   const NavItem = (props) => {
-    const { title, link, external, target, icon, image, badgeText, badgeBg = "secondary", badgeColor = "primary", iconClassName } = props;
+    const { title, link, external, target, icon, image, badgeText, badgeBg = "secondary", badgeColor = "primary", iconClassName, navClassName } = props;
     const classNames = badgeText ? "d-flex justify-content-start align-items-center justify-content-between"  : "";
     const navItemClassName = link === pathname ? "active" : "";
     const linkProps = external ? { href: link } : { as: Link, to: link };
 
     return (
-      <Nav.Item className={navItemClassName} onClick={() => setShow(false)}>
+      <Nav.Item className={navItemClassName + " " + navClassName} onClick={() => setShow(false)}>
         <Nav.Link {...linkProps} target={target} className={classNames}>
           <span>
             {icon ? <span className="sidebar-icon"><FontAwesomeIcon icon={icon} className={iconClassName}/> </span> : null}
@@ -96,29 +96,22 @@ export default function Sidebar(props = {}) {
               </Nav.Link>
             </div>
             <Nav className="flex-column pt-3 pt-md-0">
+              <NavItem title="PTFJ (Cheras)" image={ReactHero} navClassName="mb-4" />
 
               <NavItem title="Overview" link={Routes.Dashboard.path} icon={faChartPie} />
-
-              {/* <CollapsableNavItem eventKey="examples/" title="Page Examples" icon={faFileAlt}>
-                <NavItem title="Sign In" link={Routes.Login.path} />
-                <NavItem title="Sign Up" link={Routes.Register.path} />
-                <NavItem title="Forgot password" link={Routes.ForgotPassword.path} />
-                <NavItem title="Reset password" link={Routes.ResetPassword.path} />
-                <NavItem title="Lock" link={Routes.Lock.path} />
-                <NavItem title="404 Not Found" link={Routes.NotFound.path} />
-                <NavItem title="500 Server Error" link={Routes.ServerError.path} />
-              </CollapsableNavItem> */}
 
               <NavItem title="Classroom" link={Routes.Classroom.path} icon={faChalkboard} />
 
               <NavItem title="Subject" link={Routes.Subject.path} icon={faBook} />
+
+              <NavItem title="Users" link={Routes.User.path} icon={faUsers} />
               
-              <CollapsableNavItem title="Users" icon={faUsers}>
+              {/* <CollapsableNavItem title="Users" icon={faUsers}>
                 <NavItem title="All User" link={Routes.User.path} icon={faUser} />
                 <NavItem title="Admin" link={Routes.Admin.path} icon={faUserNinja} />
                 <NavItem title="Student" link={Routes.Student.path} icon={faUserGraduate} />
                 <NavItem title="Tutor" link={Routes.Tutor.path} icon={faChalkboardTeacher} />
-              </CollapsableNavItem>
+              </CollapsableNavItem> */}
 
               <Dropdown.Divider className="my-3 border-indigo" />
 

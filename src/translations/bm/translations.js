@@ -1,18 +1,25 @@
 export const TRANSLATIONS_BM = {
-    AgreeTnC: 'I agree with the terms and conditions', // to be translated
+    AgreeTnC: 'Saya bersetuju dengan terma dan syarat',
     dashboard: 'Laman Utama',
     email: 'Emel',
     firstName: 'First Name', // to be translated
     forgotPassword: 'Lupa Kata Laluan',
     lastName: 'Last Name', // to be translated
     login: 'Login',
-    notFound: 'Not Found', // to be translated
+    notFound: 'Tidak dijumpai',
     password: 'Kata Laluan',
     register: 'Daftar',
     rememberMe: 'Ingat Saya',
     signIn: 'Log Masuk',
-    signInDesc: 'Already have an account? Sign in', // to be translated
+    signInDesc: 'Sudah memppunyai akaun? Log Masuk',
     signUp: 'Log Masuk',
-    signUpDesc: "Don't have an account? Sign Up Here", // to be translated
+    signUpDesc: "Tiada akaun? Daftar sini",
     copyright: 'Hak Cipta Terpelihara',
+    createAccount: 'Buka Akaun Baru',
+    notRegistered: 'Tidak berdaftar? ',
+    quizzy: 'Quizzy',
+    sampleEmail: 'contoh@quizzy.com',
+    signInToOurPlatform: "Log masuk ke laman kami",
+    yourEmail: 'Emel',
+    yourPassword: "Kata Laluan",
 }
