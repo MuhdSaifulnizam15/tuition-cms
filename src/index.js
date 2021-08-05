@@ -4,12 +4,6 @@ import App from './App';
 import "./translations/i18n";
 import reportWebVitals from './reportWebVitals';
 
-// core styles
-import "./scss/volt.scss";
-
-// vendor styles
-import "@fortawesome/fontawesome-free/css/all.css";
-
 ReactDOM.render(
   <React.StrictMode>
     <App />

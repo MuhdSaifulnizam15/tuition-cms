@@ -49,11 +49,11 @@ const RouteWithSidebar = ({ component: Component, ...rest }) => {
         return () => clearTimeout(timer);
     }, []);
 
-    const token = JSON.parse(localStorage.getItem("token"));
+    // const token = JSON.parse(localStorage.getItem("token"));
 
-    if(!token) {
-      return <Redirect to={Routes.Login.path} />
-    }
+    // if(!token) {
+    //   return <Redirect to={Routes.Login.path} />
+    // }
   
     return (
         <Route {...rest} render={props => (
