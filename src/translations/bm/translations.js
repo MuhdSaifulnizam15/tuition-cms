@@ -22,4 +22,5 @@ export const TRANSLATIONS_BM = {
     signInToOurPlatform: "Log masuk ke laman kami",
     yourEmail: 'Emel',
     yourPassword: "Kata Laluan",
+    tuitionName: 'Pusat Tuition'
 }

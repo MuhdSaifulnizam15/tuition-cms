@@ -1,6 +1,6 @@
 export const TRANSLATIONS_EN = {
     AgreeTnC: 'I agree with the terms and conditions',
-    copyright: 'All Right Reserved',
+    copyright: 'Copyright ©',
     createAccount: 'Create Account',
     dashboard: 'Dashboard',
     notRegistered: 'Not registered? ',
@@ -22,4 +22,5 @@ export const TRANSLATIONS_EN = {
     signUpDesc: "Don't have an account? Sign Up Here",
     yourEmail: 'Your Email',
     yourPassword: "Your Password",
+    tuitionName: "Tuition Centre"
 }

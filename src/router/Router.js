@@ -37,7 +37,7 @@ const RouteWithLoader = ({ component: Component, ...rest }) => {
     }, []);
 
     return (
-        <Route {...rest} render={props => ( <> <Preloader show={loaded ? false : true} /> <Component {...props} /> </> ) } />
+        <Route {...rest} render={props => ( <><Component {...props} /> </> ) } />
     );
 };
   
@@ -58,7 +58,6 @@ const RouteWithSidebar = ({ component: Component, ...rest }) => {
     return (
         <Route {...rest} render={props => (
             <>
-            <Preloader show={loaded ? false : true} />
             <Sidebar />
     
             <main className="content">
